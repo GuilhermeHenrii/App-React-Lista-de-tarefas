@@ -25,5 +25,10 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'react/no-unused-state': 'off',
     'react/state-in-constructor': 'off',
+    'import/no-duplicates': 'off',
+    'class-methods-use-this': 'off',
+    'max-len': 'off',
+    'no-console': 'off',
+    'no-undef': 'off',
   },
 };
