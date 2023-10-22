@@ -24,6 +24,32 @@ export default class Main extends Component {
     index: -1,
   };
 
+  // método nativo do react. Esse método "escuta" quando o componente é montado
+  componentDidMount() {
+    // pegando tarefas do localStorage
+    const tarefas = JSON.parse(localStorage.getItem('tarefas'));
+
+    // retorna caso não encontre
+    if (!tarefas) return;
+
+    // atualiza o estado do array de tarefas com as tarefas do localStorage. Isto é, sempre que o componente for montado, as tarefas do local storage aparecerão na tela
+    this.setState({ tarefas });
+  }
+
+  // método nativo do react. Esse método "escuta" quando o componente é atualizado
+  componentDidUpdate(prevProps, prevState) {
+    // prevProps: adereço anterior
+    // prevState: estado anterior
+    const { tarefas } = this.state;
+
+    // se meu array de tarefas for exatamente igual a seu estado anterior (vazio), não faz nada
+    if (tarefas === prevState.tarefas) return;
+
+    // caso o seu estado mude (for adicionado alguma tarefa) execute:
+
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+  }
+
   handleSubmit = (e) => {
     e.preventDefault(); // previne submit
     const { tarefas, index } = this.state;

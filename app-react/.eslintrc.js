@@ -30,5 +30,6 @@ module.exports = {
     'max-len': 'off',
     'no-console': 'off',
     'no-undef': 'off',
+    'react/destructuring-assignment': 'off',
   },
 };
