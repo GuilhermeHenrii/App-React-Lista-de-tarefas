@@ -31,5 +31,6 @@ module.exports = {
     'no-console': 'off',
     'no-undef': 'off',
     'react/destructuring-assignment': 'off',
+    'react/forbid-prop-types': 'off',
   },
 };
