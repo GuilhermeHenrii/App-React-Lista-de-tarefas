@@ -32,5 +32,6 @@ module.exports = {
     'no-undef': 'off',
     'react/destructuring-assignment': 'off',
     'react/forbid-prop-types': 'off',
+    'linebreak-style': 'off',
   },
 };
