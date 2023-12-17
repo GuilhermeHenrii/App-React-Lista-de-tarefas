@@ -6,7 +6,7 @@ import './Tarefas.css';
 export default function Tarefas({ tarefas, handleEdit, handleDelete }) {
   return (
     <ul className="tarefas">
-      {tarefas.map((tarefa, index) => (
+      {tarefas.map((tarefa, index) => ( // aqui teremos acesso ao valor da tarefa e ao index, sendo assim as funções de editar e deletar a tarefa, conseguirá lidar com esses valores
         <li key={tarefa}>
           {tarefa}
           <div className="div-inline">
